@@ -1,0 +1,26 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Login from '../views/Login.vue'
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'Login-teste',
+    component: Login
+  },
+  {
+    path: '/painel',
+    name: 'Painel',
+    component: () => import('../views/Painel.vue')
+  }
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
+})
+
+export default router

@@ -1,11 +1,6 @@
 
 <template>
   <v-app>
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/painel">Painel</router-link>
-    </nav> -->
-    
     <router-view/>
   </v-app>
 </template>

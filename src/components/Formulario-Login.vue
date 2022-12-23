@@ -31,7 +31,7 @@
         name: "formulario-login",
         methods: {
             Login(){
-                this.$router.push('/painel')
+                this.$router.push('/dashboard')
             }
         }
     }

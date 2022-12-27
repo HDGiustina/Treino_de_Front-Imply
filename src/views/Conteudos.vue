@@ -3,7 +3,7 @@
         <Menu />
         <div class="w-full flex flex-col">
             <Header />
-            <Grid />
+            <Lista />
         </div>
     </div>
   </template>
@@ -11,13 +11,13 @@
   <script>
     import Menu from '../components/Menu.vue'
     import Header from '../components/Header.vue'
-    import Grid from '../components/Dashboard-Grid.vue'
+    import Lista from '../components/Lista-Conteudo.vue'
     export default {
         name: "Dashboard-painel",
         components: {
             Menu,
             Header,
-            Grid
+            Lista
         }
     }
   </script>

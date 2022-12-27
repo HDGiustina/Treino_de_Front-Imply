@@ -4,6 +4,7 @@ import vuetify from './plugins/vuetify'
 import router from './router'
 
 import '../src/assets/style.css';
+import '../src/assets/colors.css';
 
 Vue.config.productionTip = false
 

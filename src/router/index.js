@@ -15,6 +15,11 @@ const routes = [
     name: 'Dashboard',
     component: () => import('../views/Dashboard.vue')
   },
+  {
+    path: '/conteudo',
+    name: 'Conteudo',
+    component: () => import('../views/Conteudos.vue')
+  },
 ]
 
 const router = new VueRouter({

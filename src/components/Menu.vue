@@ -12,7 +12,7 @@
                     <a href=""><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-file-chart-outline</v-icon>Relatórios</a>
                 </li>
                 <li class="menu-nav px-16 py-3">
-                    <a href=""><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-file-edit-outline</v-icon>Conteúdos</a>
+                    <a href="/conteudo"><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-file-edit-outline</v-icon>Conteúdos</a>
                 </li>
                 <li class="menu-nav px-16 py-3">
                     <a href=""><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-puzzle</v-icon>Layout</a>
@@ -51,7 +51,7 @@
         background-color: #262D35;
     }
     a{
-        color: #ABAFB0;
+        color: var(--texto-segundo);
         font-size: 17px;
     }
     .logo {

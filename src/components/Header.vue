@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex items-center px-12 text-zinc-500 h-16" style=" background-color: #1A1F22;">
+    <div class="w-full flex items-center px-12 text-zinc-500" style="background-color: var(--background-principal); height: 70px; border-bottom: 1px solid #52525b;">
         <v-row class="d-flex justify-space-between ">
             <div class="flex flex-row items-center">
                 <div class="pe-10 border-r-2 border-r-zinc-600 text-xl text-slate-100">
@@ -11,7 +11,7 @@
             <div class="flex items-center">
                 <p class="text-xs me-3">Helena</p>
                 <img v-if="usuario" class="rounded-circle w-7" :src="usuario" alt="usuario">
-                <v-icon color="#1A1F22" style="background-color:white; padding: 1px;" left size="20" class="rounded-circle">mdi-account</v-icon>
+                <v-icon style="background-color:white; padding: 1px; color: var(--background-principal);" left size="20" class="rounded-circle">mdi-account</v-icon>
             </div>
         </v-row>
     </div>

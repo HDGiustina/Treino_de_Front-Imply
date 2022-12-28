@@ -45,7 +45,7 @@
     }
 
     button {
-        background-color: #FF6400;
+        background-color: var(--laranja-principal);
         border-radius: 6px;
     }
     p {

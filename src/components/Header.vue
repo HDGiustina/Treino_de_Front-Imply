@@ -11,7 +11,7 @@
             <div class="flex items-center">
                 <p class="text-xs me-3">Helena</p>
                 <img v-if="usuario" class="rounded-circle w-7" :src="usuario" alt="usuario">
-                <v-icon style="background-color:white; padding: 1px; color: var(--background-principal);" left size="20" class="rounded-circle">mdi-account</v-icon>
+                <v-icon v-else @click="sair" style="background-color:white; padding: 1px; color: var(--background-principal);" left size="20" class="rounded-circle">mdi-account</v-icon>
             </div>
         </v-row>
     </div>
@@ -24,8 +24,12 @@
         return {
             usuario: ''
         } 
-      }
-     
+      },
+      methods: {
+        sair(){
+            this.$router.push('/')
+        }
+      }     
   }
 </script>
 

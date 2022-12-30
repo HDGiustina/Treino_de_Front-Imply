@@ -5,30 +5,30 @@
         </div>
         <nav class="">
             <ul>
-                <li class="menu-nav px-16 py-3 ">
+                <li class="menu-nav px-10 py-1">
                     <a href="/dashboard"><v-icon color="" size="18" left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-view-dashboard</v-icon>Dashboard</a>
                 </li>
-                <li class="menu-nav px-16 py-3">
+                <li class="menu-nav px-10 py-1">
                     <a href=""><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-file-chart-outline</v-icon>Relatórios</a>
                 </li>
-                <li class="menu-nav px-16 py-3">
+                <li class="menu-nav px-10 py-1">
                     <a href="/conteudo"><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-file-edit-outline</v-icon>Conteúdos</a>
                 </li>
-                <li class="menu-nav px-16 py-3">
+                <li class="menu-nav px-10 py-1">
                     <a href=""><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-puzzle</v-icon>Layout</a>
                 </li>
-                <li class="menu-nav px-16 py-3">
+                <li class="menu-nav px-10 py-1">
                     <a href=""><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-translate</v-icon>Traduções</a>
                 </li>
-                <li class="menu-nav px-16 py-3">
+                <li class="menu-nav px-10 py-1">
                     <a href=""><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-account-supervisor</v-icon>Clientes</a>
                 </li>
-                <li class="menu-nav px-16 py-3">
+                <li class="menu-nav px-10 py-1">
                     <a href=""><v-icon color="" size="18"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-cog</v-icon>Configurações</a>
                 </li>
             </ul>
         </nav>
-        <v-card class="card my-7 mx-10 p-4" dark >
+        <v-card class="card my-7 mx-6 p-4" dark >
             <v-icon light size="26"  left style="background-color:white; border-radius: 5px; padding: 4px;">mdi-book</v-icon>
             <h1 class="text-lg my-1">Posso ajudar?</h1>
             <p class="text-xs">Acesse a nossa documentação em caso de dúvidas!</p>

@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h1>ola</h1>
+        <h1 class="text-zinc-500 ">Conteúdo</h1>
     </section>
 </template>
 

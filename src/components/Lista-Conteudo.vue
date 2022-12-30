@@ -25,7 +25,7 @@
             <button @click="add" class="btn btn-sm w-16 font-normal" style="background-color: var(--laranja-principal); color: var(--background-principal)">ADD</button>
             <button class="btn btn-sm font-normal text-sm normal-case" style="background-color: #272727; border: 1px solid var(--cinza-input)">Criar tag</button> 
         </div>   
-        <div v-else class="conatiner w-full h-full" id="add" style="visibility: visible; background-color: var(--background-principal); max-width: 850px;">
+        <div v-else class="conatiner w-full h-full" id="add" style="visibility: visible; background-color: var(--background-principal); max-width: 990px;">
             <Adicionar />
         </div>
     </section>

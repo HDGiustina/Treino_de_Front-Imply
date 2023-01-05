@@ -9,8 +9,8 @@
   </template>
   
   <script>
-    import Menu from '../components/Menu.vue'
-    import Header from '../components/Header.vue'
+    import Menu from '../components/layout/Menu.vue'
+    import Header from '../components/layout/Header.vue'
     import Grid from '../components/Dashboard-Grid.vue'
     export default {
         name: "Dashboard-painel",

@@ -14,7 +14,7 @@
             </v-tab-item>
 
             <v-tab-item style="background-color: var(--background-principal)">
-                <Conteudo />
+                <Conteudo v-on:descricao="infos" />
                 <button @click="salvar" class="btn btn-sm w-24 font-normal botao" >Salvar</button>
             </v-tab-item>
         </v-tabs>
@@ -32,11 +32,17 @@
         },
         data(){
             return {
+                dados: [],
             }
         },
         methods: {
             salvar(){
                 this.$router.go()
+            },
+            infos(descricao){
+                this.dados.push(descricao.descricao)
+                // console.log(descricao.descricao)
+                // console.log(this.dados)
             }
         }
     }

@@ -38,7 +38,7 @@
                     <input name="ordem" id="ordem" type="text" class="input input-bordered input-xs input-back">
                 </div>
             </div>
-            <button onclick="agora()">teste</button>
+            <!-- <button onclick="agora()">teste</button> -->
             <p class="col-span-5 text-sm border-l-2 border-l-zinc-500 ps-13 place-self-start mt-2">Selecione a data início e fim para que seja programado a exibição. Ordene, inative e troque o conteúdo para ser qualquer página.</p>
         </div>
     </section>

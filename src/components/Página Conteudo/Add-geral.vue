@@ -2,7 +2,7 @@
     <section class="mt-4">
         <div class="grid grid-cols-10 gap-4 place-items-center text-zinc-500 my-6 texto">
             <h1 style="" class="place-self-start mt-2">Nome</h1>
-            <input type="text" class="input input-bordered input-xs col-span-4 w-72 input-back">
+            <input v-model="geral.nome" type="text" class="input input-bordered input-xs col-span-4 w-72 input-back">
             <p class="col-span-5 border-l-2 border-l-zinc-500 ps-13">Nome que será exibido em sua lista de conteúdos e como link em sua página!</p>
         </div>
         <div class="grid grid-cols-10 gap-4 place-items-center text-zinc-500 my-6 texto">
@@ -38,6 +38,7 @@
                     <input name="ordem" id="ordem" type="text" class="input input-bordered input-xs input-back">
                 </div>
             </div>
+            <button onclick="agora()">teste</button>
             <p class="col-span-5 text-sm border-l-2 border-l-zinc-500 ps-13 place-self-start mt-2">Selecione a data início e fim para que seja programado a exibição. Ordene, inative e troque o conteúdo para ser qualquer página.</p>
         </div>
     </section>
@@ -48,9 +49,23 @@
         name: "Add-geral",
         data(){
             return {
+                geral: {nome: '', slug: '', dtinicial: '', dtfinal: '', status: '', tag: '', ordem: ''}
             }
         },
-        methods: {
+        watch:{
+            // geral(test, teste){
+            //     this.teste(teste)
+            // }
+        },
+        method: {
+            teste(){
+                //this.$emit('descricao', {descricao: this.geral})
+                console.log('teste')
+                console.log(this.geral)
+            },
+            agora(){
+                console.log('foi')
+            }
         }
     }
 </script>
@@ -61,7 +76,6 @@
     }
     .input-back{
         background-color: var(--cinza-input);
-        /* color: #71717a */
     }
     .texto{
         font-size: 13px;

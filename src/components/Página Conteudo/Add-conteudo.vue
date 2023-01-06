@@ -6,8 +6,7 @@
                 <quill-editor
                 ref="refQuillEditor"
                 :options="quillOptions"
-                @change="onEditorChange($event.text)"
-                
+                @change="descChange($event.text)"
                 >
                 </quill-editor>
             </div>
@@ -29,9 +28,9 @@
             }
         },
         methods: {
-            onEditorChange( text ) {
+            descChange( text ) {
                 this.textarea = text
-                console.log('teste')
+                //console.log('teste')
                 this.$emit('descricao', {descricao: this.textarea})
             }
         },

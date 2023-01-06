@@ -14,7 +14,7 @@
             </v-tab-item>
 
             <v-tab-item style="background-color: var(--background-principal)">
-                <Conteudo v-on:descricao="infos" />
+                <Conteudo v-on:descricao="infosDesc" />
                 <button @click="salvar" class="btn btn-sm w-24 font-normal botao" >Salvar</button>
             </v-tab-item>
         </v-tabs>
@@ -32,17 +32,15 @@
         },
         data(){
             return {
-                dados: [],
+                dados: {nome: '', slug: '', dtinicial: '', dtfinal: '', status: '', tag: '', ordem: '', descricao: ''},
             }
         },
         methods: {
             salvar(){
                 this.$router.go()
             },
-            infos(descricao){
-                this.dados.push(descricao.descricao)
-                // console.log(descricao.descricao)
-                // console.log(this.dados)
+            infosDesc(descricao){
+                this.dados.descricao = descricao.descricao
             }
         }
     }

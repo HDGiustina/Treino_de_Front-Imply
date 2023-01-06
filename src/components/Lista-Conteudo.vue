@@ -1,19 +1,19 @@
 <template>
     <section class="flex flex-col h-full w-full p-14" style=" background-color: var(--background-principal);">
-        <div v-if="!Add" class="flex flex-row  mt-6 gap-6">
-            <div class="input-group input-group-sm w-auto " dark>
+        <div v-if="!Add" class="flex flex-row mt-6 gap-6 " >
+            <div class="input-group input-group-sm w-4/12" dark>
                 <button class="btn btn-square btn-sm input-back">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                 </button>
-                <input type="text" class="input input-bordered input-sm input-back " />
+                <input type="text" class="input input-bordered input-sm input-back w-full" />
             </div>
-            <div class="flex flex-col" style="margin-top: -24px">
+            <div class="flex flex-col w-2/12" style="margin-top: -24px">
                 <label for="tag" class="text-xs pb-2" style="color: var(--texto-segundo);">Tag/tipo</label>
                 <select name="tag" id="tag" class="select select-bordered select-sm w-full max-w-xs font-normal input-back ">
                     <option disabled selected>Teste</option>
                 </select>
             </div>
-            <div class="flex flex-col" style="margin-top: -24px">
+            <div class="flex flex-col w-2/12" style="margin-top: -24px">
                 <label for="status" class="text-xs pb-2" style="color: var(--texto-segundo);">Status</label>
                 <select name="status" id="status" class="select select-bordered select-sm w-full max-w-xs  font-normal input-back">
                     <option disabled selected>teste</option>

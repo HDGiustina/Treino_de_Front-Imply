@@ -30,7 +30,7 @@
         methods: {
             descChange( text ) {
                 this.textarea = text
-                //console.log('teste')
+                //console.log(text)
                 this.$emit('descricao', {descricao: this.textarea})
             }
         },

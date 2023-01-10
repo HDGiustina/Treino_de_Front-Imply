@@ -10,7 +10,7 @@
             <v-tab >CONTEÚDO</v-tab>
 
             <v-tab-item style="background-color: var(--background-principal)">    
-                <Geral />
+                <Geral v-on:dados="infosGeral" />
             </v-tab-item>
 
             <v-tab-item style="background-color: var(--background-principal)">
@@ -41,6 +41,16 @@
             },
             infosDesc(descricao){
                 this.dados.descricao = descricao.descricao
+            },
+            infosGeral(geral){
+                this.dados.nome = geral.nome
+                this.dados.slug = geral.slug
+                this.dados.dtinicial = geral.dtinicial
+                this.dados.dtfinal = geral.dtfinal
+                this.dados.status = geral.status
+                this.dados.tag = geral.tag
+                this.dados.ordem = geral.ordem
+                console.log(this.dados)
             }
         }
     }

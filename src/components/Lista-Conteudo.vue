@@ -41,8 +41,8 @@
                     <tbody>
                         <tr v-for="item in lista" :key="item.id" class="linha item text-sm">
                             <td class="py-2">
-                                <button @click="edit(item)" class="mx-3"><v-icon size="18" color="var(--texto-segundo)">mdi-pencil</v-icon></button>
-                                <button @click="remove(item)"><v-icon size="18" color="var(--texto-segundo)">mdi-trash-can-outline</v-icon></button>
+                                <button @click="editar(item)" class="mx-3"><v-icon size="18" color="var(--texto-segundo)">mdi-pencil</v-icon></button>
+                                <button @click="remover(item)"><v-icon size="18" color="var(--texto-segundo)">mdi-trash-can-outline</v-icon></button>
                             </td>
                             <td class="py-2">{{ item.nome }}</td>
                             <td class="py-2">{{ item.ordem }}</td>
@@ -82,6 +82,11 @@
         methods: {
             add(){
                 this.Add = true
+            },
+            remover(item){
+                const idx = this.lista.indexOf(item)
+                this.lista.splice(idx, 1)
+                localStorage.setItem('conteudos', JSON.stringify(this.lista))
             }
         }
     }

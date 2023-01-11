@@ -1,24 +1,22 @@
 <template>
-    <section>
-        <v-tabs
-        dark
-        left
-        background-color="var(--background-principal)"
-        >
-            <v-tabs-slider color="var(--laranja-principal)"></v-tabs-slider>
-            <v-tab class="me-10" >GERAL</v-tab>
-            <v-tab >CONTEÚDO</v-tab>
+    <v-tabs
+    dark
+    left
+    background-color="var(--background-principal)"
+    >
+        <v-tabs-slider color="var(--laranja-principal)"></v-tabs-slider>
+        <v-tab class="me-10" >GERAL</v-tab>
+        <v-tab >CONTEÚDO</v-tab>
 
-            <v-tab-item style="background-color: var(--background-principal)">    
-                <Geral v-on:dados="infosGeral" />
-            </v-tab-item>
+        <v-tab-item style="background-color: var(--background-principal)">    
+            <Geral v-on:dados="infosGeral" />
+        </v-tab-item>
 
-            <v-tab-item style="background-color: var(--background-principal)">
-                <Conteudo v-on:descricao="infosDesc" />
-                <button @click="salvar" class="btn btn-sm w-24 font-normal botao" >Salvar</button>
-            </v-tab-item>
-        </v-tabs>
-    </section>
+        <v-tab-item style="background-color: var(--background-principal)">
+            <Conteudo v-on:descricao="infosDesc" />
+            <button @click="salvar()" class="btn btn-sm w-24 font-normal botao" >Salvar</button>
+        </v-tab-item>
+    </v-tabs>
 </template>
 
 <script>
@@ -26,21 +24,34 @@
     import Conteudo from '../Página Conteudo/Add-conteudo.vue'
     export default {
         name: "Adicionar-conteudo",
+        props: ['lista'],
         components: {
             Geral,
             Conteudo
         },
         data(){
             return {
-                dados: {nome: '', slug: '', dtinicial: '', dtfinal: '', status: '', tag: '', ordem: '', descricao: ''},
+                dados: {id: 0, nome: '', slug: '', dtinicial: '', dtfinal: '', status: '', tag: '', ordem: '', descricao: ''},
+                index: null
             }
         },
         methods: {
             salvar(){
+                // console.log(this.lista)
+                let thislista = this.lista
+                if(this.dados.id === 0) {
+                    this.dados.id = thislista.length + 1
+                    thislista.push(this.dados)
+                } else {
+                    thislista[this.index] = this.dados
+                }
+                localStorage.setItem('conteudos', JSON.stringify(thislista))
+                this.dados = {id: 0, nome: '', slug: '', dtinicial: '', dtfinal: '', status: '', tag: '', ordem: '', descricao: ''}
                 this.$router.go()
             },
             infosDesc(descricao){
                 this.dados.descricao = descricao.descricao
+                //console.log(this.dados)
             },
             infosGeral(geral){
                 this.dados.nome = geral.nome
@@ -50,7 +61,7 @@
                 this.dados.status = geral.status
                 this.dados.tag = geral.tag
                 this.dados.ordem = geral.ordem
-                console.log(this.dados)
+                //console.log(this.dados)
             }
         }
     }

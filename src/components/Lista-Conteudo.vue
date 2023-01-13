@@ -55,7 +55,7 @@
             </div>
         </div>
         <div v-else class="conatiner w-full h-full" id="add" style="visibility: visible; background-color: var(--background-principal); max-width: 990px;">
-            <Adicionar :lista="lista" />
+            <Adicionar :lista="lista" :item="item"/>
         </div>
     </section>
 </template>
@@ -72,6 +72,7 @@
                 Add: false,
                 items: '',
                 lista: [],
+                item: false,
             }
         },
         mounted() {
@@ -87,6 +88,10 @@
                 const idx = this.lista.indexOf(item)
                 this.lista.splice(idx, 1)
                 localStorage.setItem('conteudos', JSON.stringify(this.lista))
+            },
+            editar(item){
+                this.item = item
+                this.Add = true
             }
         }
     }

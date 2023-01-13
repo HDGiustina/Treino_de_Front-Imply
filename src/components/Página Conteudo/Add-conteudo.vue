@@ -7,6 +7,7 @@
                 ref="refQuillEditor"
                 :options="quillOptions"
                 @change="descChange($event.text)"
+                id="teste"
                 >
                 </quill-editor>
             </div>
@@ -19,6 +20,7 @@
 <script>
     export default {
         name: "Add-conteudo",
+        props:['edit'],
         data(){
             return {
                 textarea: '',
@@ -30,10 +32,16 @@
         methods: {
             descChange( text ) {
                 this.textarea = text
-                //console.log(text)
                 this.$emit('descricao', {descricao: this.textarea})
             }
         },
+        mounted(){
+            if(this.edit != false){
+                let test = document.getElementById('teste')
+                test = test.getElementsByTagName('p')[0]
+                test.innerHTML = this.edit.descricao
+            }
+        }
     }
 </script>
 

@@ -48,15 +48,21 @@
 <script>
     export default {
         name: "Add-geral",
+        props:['edit'],
         data(){
             return {
-                geral: {nome: '', slug: '', dtinicial: '', dtfinal: '', status: '', tag: '', ordem: ''}
+                geral: {id: 0, nome: '', slug: '', dtinicial: '', dtfinal: '', status: '', tag: '', ordem: ''}
             }
         },
         methods: {
             geralChange(){
                 this.$emit('dados', this.geral)
             },
+        },
+        mounted(){
+            if(this.edit != false){
+                this.geral = this.edit
+            }
         }
     }
 </script>

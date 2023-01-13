@@ -9,11 +9,11 @@
         <v-tab >CONTEÚDO</v-tab>
 
         <v-tab-item style="background-color: var(--background-principal)">    
-            <Geral v-on:dados="infosGeral" />
+            <Geral v-on:dados="infosGeral" :edit="item"/>
         </v-tab-item>
 
         <v-tab-item style="background-color: var(--background-principal)">
-            <Conteudo v-on:descricao="infosDesc" />
+            <Conteudo v-on:descricao="infosDesc" :edit="item"/>
             <button @click="salvar()" class="btn btn-sm w-24 font-normal botao" >Salvar</button>
         </v-tab-item>
     </v-tabs>
@@ -24,7 +24,7 @@
     import Conteudo from '../Página Conteudo/Add-conteudo.vue'
     export default {
         name: "Adicionar-conteudo",
-        props: ['lista'],
+        props: ['lista', 'item'],
         components: {
             Geral,
             Conteudo
@@ -62,6 +62,11 @@
                 this.dados.tag = geral.tag
                 this.dados.ordem = geral.ordem
                 //console.log(this.dados)
+            },
+        },
+        mounted(){
+            if(this.item != false){
+                this.dados = this.item
             }
         }
     }

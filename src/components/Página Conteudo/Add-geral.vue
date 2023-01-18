@@ -24,7 +24,8 @@
                 <div class="col-span-2 grid grid-cols-1 gap-1">
                     <label for="status" class="text-zinc-500">Status</label>
                     <select @change="geralChange()" v-model="geral.status"  name="status" id="status" class="select select-bordered select-xs w-full max-w-xs font-normal input-back">
-                        <option disabled >Teste</option>
+                        <option >Ativo</option>
+                        <option >Desativado</option>
                     </select>
                 </div>
                 <div class="col-span-2 grid grid-cols-1 gap-1">
